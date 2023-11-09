@@ -2,6 +2,7 @@ package cajaBlanca;
 
 import static org.junit.Assert.*;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 import org.junit.Before;
@@ -16,17 +17,15 @@ public class TestColeccionEmpleadosVacia {
 	private UtilPromo utilPromo;
 	private HashMap<String, EmpleadoPretenso> empleados=new HashMap<>();
 	private HashMap<String, Empleador> empleadores=new HashMap<>();
-	private Cliente empleador;
+	private Empleador empleador=new Empleador();
 	
 	@Before 
 	 public void setup() {
 		 utilPromo=new UtilPromo();
-		Empleador empleador =new Empleador();
-		empleador.setRealName("Manuel");	
-		empleadores.put(null, empleador);
+		empleadores.put("Manuel", this.empleador);
 	}
-	
-	/*	promoPorListaDePostulantes==true;
+	/*	
+	promoPorListaDePostulantes==true;
 	empleadores.size()==1;
 	La lista del empleador debe ser==null
 	empleados.size() == 0;
@@ -36,7 +35,7 @@ public class TestColeccionEmpleadosVacia {
 	public void testC6() {
 		empleador.setListaDePostulantes(null);
 		utilPromo.aplicaPromo(true, empleados, empleadores);
-		assertEquals("El metodo retorna null",empleador,utilPromo.aplicaPromo(true, empleados, empleadores));
+		assertEquals("El metodo retorna null",null,utilPromo.aplicaPromo(true, empleados, empleadores));
 	}
 /*	promoPorListaDePostulantes==true;
 	empleadores.size()==1;
@@ -49,9 +48,11 @@ public class TestColeccionEmpleadosVacia {
 		ClientePuntaje CP=new ClientePuntaje();
 		empleado.setPuntaje(10);
 		CP.setCliente(empleado);
-		empleador.getListaDePostulantes().add(CP);
+		ArrayList <ClientePuntaje> listaPostulantes = new ArrayList<>();
+		listaPostulantes.add(CP);
+		empleador.setListaDePostulantes(listaPostulantes);
 
-		assertEquals("El metodo retorna null",empleador,utilPromo.aplicaPromo(true, empleados, empleadores));
+		assertEquals("El metodo retorna un empleador",empleador,utilPromo.aplicaPromo(true, empleados, empleadores));
 	}
 	
 
