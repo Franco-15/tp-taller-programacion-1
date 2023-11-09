@@ -24,13 +24,13 @@ public class TestEmpleador {
 
     @Test
     public void testConstructorEmpleadorVacio(){
-        Empleador empleador = new Empleador("","","","","","");
+        Empleador empleador = new Empleador("","","","",Constantes.COMERCIO_LOCAL,Constantes.JURIDICA);
         Assert.assertEquals("El usserName no ha sido registrado correctamente","", empleador.getUsserName());
         Assert.assertEquals("La contraseña no ha sido registrada correctamente","", empleador.getPassword());
         Assert.assertEquals("El nombre real no ha sido registrado correctamente","", empleador.getRealName());
         Assert.assertEquals("El telefono no ha sido registrado correctamente","", empleador.getTelefono());
-        Assert.assertEquals("El rubro no ha sido registrado correctamente","", empleador.getRubro());
-        Assert.assertEquals("El tipo de persona no ha sido registrado correctamente","", empleador.getTipoPersona());
+        Assert.assertEquals("El rubro no ha sido registrado correctamente",Constantes.COMERCIO_LOCAL, empleador.getRubro());
+        Assert.assertEquals("El tipo de persona no ha sido registrado correctamente",Constantes.JURIDICA, empleador.getTipoPersona());
     }
     
     @Test
