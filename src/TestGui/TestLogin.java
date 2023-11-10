@@ -7,6 +7,8 @@ import java.awt.Robot;
 import javax.swing.JButton;
 import javax.swing.JTextField;
 import util.Constantes;
+
+import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -31,6 +33,14 @@ public class TestLogin {
     {
         controlador = new Controlador();
     }
+    
+    @After
+    public void tearDown() throws Exception
+    {
+        Ventana ventana = (Ventana) controlador.getVista();
+        ventana.setVisible(false);
+    }
+
 
     @Test
     public void testRegSoloNombre()
