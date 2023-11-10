@@ -7,10 +7,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
-<<<<<<< HEAD
 	<classpathentry kind="lib" path="lib/LinkeFi_v2.jar"/>
-=======
-	<classpathentry kind="lib" path="lib/LinkeFi_v3.jar"/>
->>>>>>> main
 	<classpathentry kind="output" path="bin"/>
 </classpath>
