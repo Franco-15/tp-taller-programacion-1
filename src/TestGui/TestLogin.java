@@ -30,7 +30,6 @@ public class TestLogin {
     public void setUp() throws Exception
     {
         controlador = new Controlador();
-        controlador.setVista(new Ventana(controlador));
     }
 
     @Test
