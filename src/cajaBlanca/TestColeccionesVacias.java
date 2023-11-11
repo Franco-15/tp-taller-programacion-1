@@ -32,6 +32,7 @@ empleados.size()==0;
 @Test
 public void testC5() {
 UtilPromo utilPromo=new UtilPromo();
+ 
 assertEquals("El metodo retorna null",null,utilPromo.aplicaPromo(true, empleados, empleadores));
 }
 
