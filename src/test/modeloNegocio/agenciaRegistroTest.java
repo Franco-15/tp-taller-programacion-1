@@ -1,18 +1,15 @@
 package test.modeloNegocio;
 
-import static org.junit.Assert.fail;
-
 import org.junit.Assert;
-import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
 import excepciones.ImposibleCrearEmpleadoException;
 import excepciones.ImposibleCrearEmpleadorException;
 import excepciones.NewRegisterException;
+import modeloDatos.Cliente;
 import modeloNegocio.Agencia;
 import util.Constantes;
-import modeloDatos.Cliente;
 
 public class agenciaRegistroTest {
 	private static Agencia agencia = Agencia.getInstance();

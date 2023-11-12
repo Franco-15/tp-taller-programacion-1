@@ -1,13 +1,11 @@
 package test.modeloNegocio;
 
-import static org.junit.Assert.*;
-
+import org.junit.Assert;
 import org.junit.Test;
 
-import junit.framework.Assert;
-import modeloNegocio.Agencia;
 import excepciones.LimiteInferiorRemuneracionInvalidaException;
 import excepciones.LimiteSuperiorRemuneracionInvalidaException;
+import modeloNegocio.Agencia;
 
 public class agenciaSetLimitesRenumeracionTest {
 

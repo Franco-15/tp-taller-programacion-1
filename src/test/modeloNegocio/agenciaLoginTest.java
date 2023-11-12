@@ -1,13 +1,10 @@
 package test.modeloNegocio;
 
-import static org.junit.Assert.*;
-
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
 import excepciones.ContraException;
-import excepciones.NewRegisterException;
 import excepciones.NombreUsuarioException;
 import modeloDatos.Cliente;
 import modeloDatos.Usuario;
