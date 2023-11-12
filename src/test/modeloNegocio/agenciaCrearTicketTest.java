@@ -2,11 +2,11 @@ package test.modeloNegocio;
 
 import static org.junit.Assert.*;
 
+import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
 import excepciones.ImposibleModificarTicketsException;
-import junit.framework.Assert;
 import modeloDatos.Cliente;
 import modeloDatos.Ticket;
 import modeloNegocio.Agencia;
