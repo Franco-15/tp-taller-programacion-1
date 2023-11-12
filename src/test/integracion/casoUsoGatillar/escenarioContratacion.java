@@ -79,11 +79,6 @@ public class escenarioContratacion {
 	    
 		agencia.gatillarRonda();
 		
-		System.out.println(empleado1.getListaDePostulantes());
-		System.out.println(empleado2.getListaDePostulantes());
-		System.out.println(empleador1.getListaDePostulantes());
-		System.out.println(empleador2.getListaDePostulantes());
-		
 	}
 
 	@Test
