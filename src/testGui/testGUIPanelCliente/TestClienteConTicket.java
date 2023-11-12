@@ -1,4 +1,4 @@
-package testGui.testPanelCliente;
+package testGui.testGUIPanelCliente;
 
 import java.awt.AWTException;
 import java.awt.Robot;

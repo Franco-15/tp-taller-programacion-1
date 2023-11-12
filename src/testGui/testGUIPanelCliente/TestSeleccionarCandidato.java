@@ -1,4 +1,4 @@
-package testGui.testPanelCliente;
+package testGui.testGUIPanelCliente;
 
 
 import java.awt.AWTException;
@@ -89,7 +89,7 @@ public class TestSeleccionarCandidato {
 
 	}
 	
-//	El botón SELECCIONAR_CANDIDATO invoca al método seleccionar candidato de la clase Controlador.
+//	El botï¿½n SELECCIONAR_CANDIDATO invoca al mï¿½todo seleccionar candidato de la clase Controlador.
 	@Test
 	public void testSeleccionarCandidato(){
 		JList<ClientePuntaje> lista = (JList<ClientePuntaje>) TestUtils.getComponentForName((Ventana) controlador.getVista(),

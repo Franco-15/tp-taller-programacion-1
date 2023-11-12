@@ -1,4 +1,4 @@
-package testGui.testPanelCliente;
+package testGui.testGUIPanelCliente;
 
 import java.awt.AWTException;
 import java.awt.Robot;
@@ -87,8 +87,8 @@ public class TestCliente {
 		Assert.assertTrue("Campo remuneracion desactivado", tipoDePuesto.isEnabled());
 	}
 
-//	Los componentes del panel de creación de Ticket y el botón CONFIRMARNUEVOTICKET 
-//	permanecerán deshabilitados hasta que se pulse el botón NUEVOTICKET
+//	Los componentes del panel de creaciï¿½n de Ticket y el botï¿½n CONFIRMARNUEVOTICKET 
+//	permanecerï¿½n deshabilitados hasta que se pulse el botï¿½n NUEVOTICKET
 	
 	@Test
 	public void testNuevoTicketHabilitado() {
@@ -108,7 +108,7 @@ public class TestCliente {
 		Assert.assertFalse("Campo aceptar habilitado", aceptar.isEnabled());
 	}
 
-//	Cuando TEXTFIELD_REMUNERACION contenga un entero positivo se habilitará el botón CONFIRMARNUEVOTICKET
+//	Cuando TEXTFIELD_REMUNERACION contenga un entero positivo se habilitarï¿½ el botï¿½n CONFIRMARNUEVOTICKET
 
 	@Test
 	public void testHabilitadoAceptar1() {
@@ -163,8 +163,8 @@ public class TestCliente {
 		Assert.assertFalse("Aceptar habilitado", aceptar.isEnabled());
 	}
 
-//	Al pulsar el botón CONFIRMARNUEVOTICKET, se deshabilitan el botón CONFIRMARNUEVOTICKET y 
-//	los componentes del panel de creación de ticket. Además, se habilitan el botón NUEVOTICKET. 
+//	Al pulsar el botï¿½n CONFIRMARNUEVOTICKET, se deshabilitan el botï¿½n CONFIRMARNUEVOTICKET y 
+//	los componentes del panel de creaciï¿½n de ticket. Ademï¿½s, se habilitan el botï¿½n NUEVOTICKET. 
 //
 	
 	@Test
