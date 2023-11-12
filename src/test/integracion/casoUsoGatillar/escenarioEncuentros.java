@@ -2,13 +2,19 @@ package test.integracion.casoUsoGatillar;
 
 import static org.junit.Assert.*;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
+import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
+import modeloDatos.Contratacion;
 import modeloDatos.EmpleadoPretenso;
 import modeloDatos.Empleador;
 import modeloNegocio.Agencia;
 import util.Constantes;
+import util.Mensajes;
 
 public class escenarioEncuentros {
 	private static Agencia agencia;
@@ -98,29 +104,95 @@ public class escenarioEncuentros {
 	    
 		agencia.gatillarRonda();
 		
-		System.out.println(empleado1.getListaDePostulantes());
-		System.out.println(empleado2.getListaDePostulantes());
-		System.out.println(empleador1.getListaDePostulantes());
-		System.out.println(empleador2.getListaDePostulantes());
-		
-		System.out.println("Puntaje e1:" + empleado1.getPuntaje());
-		System.out.println("Puntaje e2:" + empleado2.getPuntaje());
-		System.out.println("Puntaje er1:" + empleador1.getPuntaje());
-		System.out.println("Puntaje er2:" + empleador2.getPuntaje());
-		
-		empleado1.setCandidato(empleador2);
-		empleador2.setCandidato(empleado1);
+		empleado1.setCandidato(empleador1);
+		empleado2.setCandidato(empleador1);
+		empleador1.setCandidato(empleado1);
+		empleador2.setCandidato(empleado2);
 		
 		agencia.gatillarRonda();
-		
-		System.out.println(agencia.);
-
-		
 	}
 
 	@Test
-	public void test() {
-		fail("Not yet implemented");
+	public void testEstadoContratacion() {
+		Assert.assertEquals(
+			"Se esperaba que la agencia este en estado de contratacion.",
+			Mensajes.AGENCIA_EN_BUSQUEDA.getValor(),
+			agencia.getEstado()
+		);
+	}
+	
+	@Test
+	public void testListaDeAsignacionesVacias() {
+		Arrays.asList(
+			empleado1.getListaDePostulantes(),
+			empleado2.getListaDePostulantes(),
+			empleador1.getListaDePostulantes(),
+			empleador2.getListaDePostulantes()
+		).forEach(lista -> {
+			Assert.assertNull(
+				"Se esperaba que la lista de postulantes este vacia.",
+				lista
+			);
+		});
+	}
+	
+	@Test
+	public void testPuntajesEsperados() {
+		Assert.assertEquals(
+			"Puntaje empleado1 equivocado.",
+			10,
+			empleado1.getPuntaje()
+		);
+		Assert.assertEquals(
+			"Puntaje empleado2 equivocado.",
+			0,
+			empleado1.getPuntaje()
+		);
+		Assert.assertEquals(
+			"Puntaje empleador1 equivocado.",
+			60,
+			empleado1.getPuntaje()
+		);
+		Assert.assertEquals(
+			"Puntaje empleador2 equivocado.",
+			-10,
+			empleado1.getPuntaje()
+		);
+	}
+	
+	@Test
+	public void testContratacionesGeneradas() {
+		ArrayList<Contratacion> contrataciones = agencia.getContrataciones();
+		Assert.assertEquals(
+			"Se esperaba una sola contratacion.",
+			1,
+			contrataciones.size()
+		);
+		
+		Assert.assertEquals(
+			"Se esperaba que la contratacions sea entre empleado 1 y empleador 1.",
+			empleador1,
+			contrataciones.get(0).getEmpleador()
+		);
+		
+		Assert.assertEquals(
+			"Se esperaba que la contratacions sea entre empleado 1 y empleador 1.",
+			empleado1,
+			contrataciones.get(0).getEmpleado()
+		);
+		
+	}
+	
+	@Test
+	public void testTicketsEliminados() {
+		Assert.assertNull(
+			"Se debia eliminar el ticket de empleado 1 ya que tubo una contratacion.",
+			empleado1.getTicket()
+		);
+		Assert.assertNull(
+			"Se debia de eliminar el ticket del empleador 1 ya que tubo una contratacion",  
+			empleador1.getTicket()
+		);
 	}
 
 
