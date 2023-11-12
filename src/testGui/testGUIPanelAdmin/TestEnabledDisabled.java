@@ -25,7 +25,7 @@ public class TestEnabledDisabled {
 			robot = new Robot();
 		} catch (AWTException e) {
 		}
-	}
+	} 
 
 	@Before
 	public void setUp() throws Exception {
@@ -78,7 +78,7 @@ public class TestEnabledDisabled {
 		TestUtils.clickComponent(superior, robot);
 		TestUtils.tipeaTexto("10", robot);
 		Assert.assertFalse("El boton 'cambiar' deberia estar deshablitado", cambiar.isEnabled());
-	}
+	} 
 
 	@Test
 

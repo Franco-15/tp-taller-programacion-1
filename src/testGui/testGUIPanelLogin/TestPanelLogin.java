@@ -28,7 +28,7 @@ public class TestPanelLogin {
         {
         }
     }
-
+ 
     @Before
     public void setUp() throws Exception
     {
@@ -53,4 +53,29 @@ public class TestPanelLogin {
         TestUtils.tipeaTexto("holajfgjfgjfgjfgjfgjfgjfgjfgjfgjfgjgfjfgjfgjfgjfgjfgj", robot);
         Assert.assertFalse("El boton de registro deberia estar deshablitado", aceptarLog.isEnabled());
     }
+    @Test
+    public void testRegSoloPassword()
+    {
+        robot.delay(TestUtils.getDelay());
+        JTextField password = (JTextField) TestUtils.getComponentForName((Ventana) controlador.getVista(), Constantes.PASSWORD);
+        JButton aceptarLog = (JButton) TestUtils.getComponentForName((Ventana) controlador.getVista(), Constantes.LOGIN);
+        TestUtils.clickComponent(password, robot);
+        TestUtils.tipeaTexto("holajfgjfgjfgjfgjfgjfgjfgjfgjfgjfgjgfjfgjfgjfgjfgjfgj", robot);
+        Assert.assertFalse("El boton de registro deberia estar deshablitado", aceptarLog.isEnabled());
+    }
+
+    @Test
+    public void testRegNombreYPassword()
+    {
+        robot.delay(TestUtils.getDelay());
+        JTextField nombre = (JTextField) TestUtils.getComponentForName((Ventana) controlador.getVista(), Constantes.NOMBRE_USUARIO);
+        JTextField password = (JTextField) TestUtils.getComponentForName((Ventana) controlador.getVista(), Constantes.PASSWORD);
+        JButton aceptarLog = (JButton) TestUtils.getComponentForName((Ventana) controlador.getVista(), Constantes.LOGIN);
+        TestUtils.clickComponent(nombre, robot);
+        TestUtils.tipeaTexto("holajfgjfgjfgjfgjfgjfgjfgjfgjfgjfgjgfjfgjfgjfgjfgjfgj", robot);
+        TestUtils.clickComponent(password, robot);
+        TestUtils.tipeaTexto("holajfgjfgjfgjfgjfgjfgjfgjfgjfgjfgjgfjfgjfgjfgjfgjfgj", robot);
+        Assert.assertTrue("El boton de registro deberia estar hablitado", aceptarLog.isEnabled());
+    } 
+
 }
