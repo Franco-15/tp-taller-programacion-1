@@ -1,4 +1,4 @@
-package TestGui;
+package testGui;
 
 import java.awt.Component;
 import java.awt.Container;
@@ -7,8 +7,6 @@ import java.awt.Robot;
 import java.awt.event.InputEvent;
 import java.awt.event.KeyEvent;
 
-import vista.IVista;
-import vista.Ventana;
 import javax.swing.JTextField;
 
 /**
@@ -67,11 +65,12 @@ public class TestUtils
      */
     public static Point getCentro(Component componente) {
         Point retorno = null;
-        if (componente != null)
+        if (componente != null) {
             retorno = componente.getLocationOnScreen();
-        retorno.x += componente.getWidth() / 2;
-        retorno.y += componente.getHeight() / 2;
-        return retorno;
+        	retorno.x += componente.getWidth() / 2;
+        	retorno.y += componente.getHeight() / 2;
+        }
+        	return retorno;
     }
 
     /**MEtodo que hace click en un componente utilizando la clase Robot

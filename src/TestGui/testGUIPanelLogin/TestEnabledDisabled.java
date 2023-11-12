@@ -1,6 +1,7 @@
-package TestGui;
+package testGui.testGUIPanelLogin;
 
 import controlador.Controlador;
+import testGui.TestUtils;
 import vista.Ventana;
 import java.awt.AWTException;
 import java.awt.Robot;
@@ -14,11 +15,12 @@ import org.junit.Before;
 import org.junit.Test;
 
 
-public class TestLogin {
+
+public class TestEnabledDisabled {
     Robot robot;
     Controlador controlador;
 
-    public TestLogin()
+    public TestEnabledDisabled()
     {
         try
         {
@@ -49,7 +51,7 @@ public class TestLogin {
         JTextField nombre = (JTextField) TestUtils.getComponentForName((Ventana) controlador.getVista(), Constantes.NOMBRE_USUARIO);
         JButton aceptarLog = (JButton) TestUtils.getComponentForName((Ventana) controlador.getVista(), Constantes.LOGIN);
         TestUtils.clickComponent(nombre, robot);
-        TestUtils.tipeaTexto("holajfgjfgjfgjfgjfgjfgjfgjfgjfgjfgjgfjfgjfgjfgjfgjfgj", robot);
+        TestUtils.tipeaTexto("usuario1", robot);
         Assert.assertFalse("El boton de registro deberia estar deshablitado", aceptarLog.isEnabled());
     }
 
@@ -60,7 +62,7 @@ public class TestLogin {
         JTextField password = (JTextField) TestUtils.getComponentForName((Ventana) controlador.getVista(), Constantes.PASSWORD);
         JButton aceptarLog = (JButton) TestUtils.getComponentForName((Ventana) controlador.getVista(), Constantes.LOGIN);
         TestUtils.clickComponent(password, robot);
-        TestUtils.tipeaTexto("holajfgjfgjfgjfgjfgjfgjfgjfgjfgjfgjgfjfgjfgjfgjfgjfgj", robot);
+        TestUtils.tipeaTexto("contra1", robot);
         Assert.assertFalse("El boton de registro deberia estar deshablitado", aceptarLog.isEnabled());
     }
 
@@ -72,9 +74,9 @@ public class TestLogin {
         JTextField password = (JTextField) TestUtils.getComponentForName((Ventana) controlador.getVista(), Constantes.PASSWORD);
         JButton aceptarLog = (JButton) TestUtils.getComponentForName((Ventana) controlador.getVista(), Constantes.LOGIN);
         TestUtils.clickComponent(nombre, robot);
-        TestUtils.tipeaTexto("holajfgjfgjfgjfgjfgjfgjfgjfgjfgjfgjgfjfgjfgjfgjfgjfgj", robot);
+        TestUtils.tipeaTexto("usuario1", robot);
         TestUtils.clickComponent(password, robot);
-        TestUtils.tipeaTexto("holajfgjfgjfgjfgjfgjfgjfgjfgjfgjfgjgfjfgjfgjfgjfgjfgj", robot);
+        TestUtils.tipeaTexto("contra1", robot);
         Assert.assertTrue("El boton de registro deberia estar hablitado", aceptarLog.isEnabled());
     }
 
