@@ -19,13 +19,13 @@ import util.Constantes;
 import util.Mensajes;
 import vista.Ventana;
 
-public class testPanelLogin {
+public class TestPanelLogin {
 
 	Robot robot;
     Controlador controlador;
     Agencia agencia;
     FalseOptionPane op = new FalseOptionPane();
-    public testPanelLogin()
+    public TestPanelLogin()
     {
         try
         {
