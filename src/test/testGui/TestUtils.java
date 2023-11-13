@@ -1,4 +1,4 @@
-package testGui;
+package test.testGui;
 
 import java.awt.Component;
 import java.awt.Container;
@@ -10,7 +10,7 @@ import java.awt.event.KeyEvent;
 import javax.swing.JTextField;
 
 /**
- * Clase que ofrece metodos estáticos para ayudar al testeo de GUI utilizando la clase Robot
+ * Clase que ofrece metodos estï¿½ticos para ayudar al testeo de GUI utilizando la clase Robot
  */
 public class TestUtils
 
@@ -75,7 +75,7 @@ public class TestUtils
 
     /**MEtodo que hace click en un componente utilizando la clase Robot
      * @param component Componente sobre el que se quiere hacer click
-     * @param robot Referencia al Robot que se utilizará
+     * @param robot Referencia al Robot que se utilizarï¿½
      */
     public static void clickComponent(Component component, Robot robot) {
         Point punto = TestUtils.getCentro(component);
@@ -90,7 +90,7 @@ public class TestUtils
      * Metodo que tipea un texto utilizando la clase Robot.
      * Solo se aplica a textos que contengan letras de la 'a' a la 'z', tanto mayusculas como minusculas. 
      * @param texto Texto que se desea tipear. Debera contener solamente letras de la 'a' a la 'z', tanto mayusculas como minusculas. 
-     * @param robot Referencia al Robot que se utilizará
+     * @param robot Referencia al Robot que se utilizarï¿½
      */
     public static void tipeaTexto(String texto, Robot robot) {
         String mayusculas = texto.toUpperCase();
@@ -112,7 +112,7 @@ public class TestUtils
     /**
      * Borra el texto de un JTextField simulando el pulsado de la tecla 'Delete' utilizando la clase Robot
      * @param jtextfield JTextField al que se desea borrar su texto
-     * @param robot Referencia al Robot que se utilizará
+     * @param robot Referencia al Robot que se utilizarï¿½
      */
     public static void borraJTextField(JTextField jtextfield, Robot robot) {
         Point punto = null;

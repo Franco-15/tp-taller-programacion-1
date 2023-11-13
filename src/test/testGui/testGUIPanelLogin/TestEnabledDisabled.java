@@ -1,7 +1,7 @@
-package testGui.testGUIPanelLogin;
+package test.testGui.testGUIPanelLogin;
 
 import controlador.Controlador;
-import testGui.TestUtils;
+import test.testGui.TestUtils;
 import vista.Ventana;
 import java.awt.AWTException;
 import java.awt.Robot;

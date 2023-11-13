@@ -1,4 +1,4 @@
-package testGui.testGUIPanelLogin;
+package test.testGui.testGUIPanelLogin;
 
 import java.awt.AWTException;
 import java.awt.Robot;
@@ -13,8 +13,8 @@ import org.junit.Test;
 
 import controlador.Controlador;
 import modeloNegocio.Agencia;
-import testGui.FalseOptionPane;
-import testGui.TestUtils;
+import test.testGui.FalseOptionPane;
+import test.testGui.TestUtils;
 import util.Constantes;
 import util.Mensajes;
 import vista.Ventana;

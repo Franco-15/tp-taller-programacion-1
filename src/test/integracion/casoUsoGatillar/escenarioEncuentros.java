@@ -1,4 +1,4 @@
-package test.integracion.casoUsoGatillar;
+package test.Integracion.casoUsoGatillar;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -22,6 +22,7 @@ public class escenarioEncuentros {
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
 		agencia = Agencia.getInstance();
+		agencia.setEstadoContratacion(false);
 		empleado1 = (EmpleadoPretenso) agencia.registroEmpleado(
 				"eo1", //usuario
 				"aa",//pass
@@ -114,7 +115,7 @@ public class escenarioEncuentros {
 	@AfterClass
 	public static void tearDown() {
 	agencia.getEmpleados().clear();
-
+	agencia.getEmpleadores().clear();
 	}
 
 	@Test

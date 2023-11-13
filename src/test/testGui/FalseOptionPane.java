@@ -1,4 +1,4 @@
-package testGui;
+package test.testGui;
 
 import vista.IOptionPane;
 

@@ -1,4 +1,4 @@
-package testGui.testGUIPanelCliente;
+package test.testGui.testGUIPanelCliente;
 
 
 import java.awt.AWTException;
@@ -21,8 +21,8 @@ import modeloDatos.ClientePuntaje;
 import modeloDatos.EmpleadoPretenso;
 import modeloDatos.Empleador;
 import modeloNegocio.Agencia;
-import testGui.FalseOptionPane;
-import testGui.TestUtils;
+import test.testGui.FalseOptionPane;
+import test.testGui.TestUtils;
 import util.Constantes;
 import vista.Ventana;
 

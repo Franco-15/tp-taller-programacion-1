@@ -1,4 +1,4 @@
-package cajaBlanca;
+package test.cajaBlanca;
 import static org.junit.Assert.assertEquals;
 
 

@@ -1,4 +1,4 @@
-package testGui.testGUIPanelRegistro;
+package test.testGui.testGUIPanelRegistro;
 
 import java.awt.AWTException;
 import java.awt.Robot;
@@ -13,7 +13,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import bin.controlador.Controlador;
-import testGui.TestUtils;
+import test.testGui.TestUtils;
 import util.Constantes;
 import vista.Ventana;
 
@@ -22,10 +22,10 @@ public class TestEnabledDisabled {
 	Controlador controlador;
 
 	/*
-	 * En el caso de seleccionar un empleador, el botón REG_BUTTON_REGISTRAR estará
+	 * En el caso de seleccionar un empleador, el botï¿½n REG_BUTTON_REGISTRAR estarï¿½
 	 * habilitado si y solo si todos los textField de la izquierda son distintos de
-	 * vacío. En el caso de seleccionar un empleado, el botón REG_BUTTON_REGISTRAR
-	 * estará habilitado si y solo si todos los textField son distintos de vacío y
+	 * vacï¿½o. En el caso de seleccionar un empleado, el botï¿½n REG_BUTTON_REGISTRAR
+	 * estarï¿½ habilitado si y solo si todos los textField son distintos de vacï¿½o y
 	 * la edad contiene un valor entero positivo.
 	 */
 	public TestEnabledDisabled() {
@@ -263,7 +263,7 @@ public class TestEnabledDisabled {
 	}
 
 	@Test
-	public void EmpleadoTodosValidosMenosContraseña() {
+	public void EmpleadoTodosValidosMenospassword() {
 		JRadioButton RBEmpleado = (JRadioButton) TestUtils.getComponentForName((Ventana) controlador.getVista(),
 				Constantes.EMPLEADO);
 		JButton Registrar = (JButton) TestUtils.getComponentForName((Ventana) controlador.getVista(),
@@ -304,7 +304,7 @@ public class TestEnabledDisabled {
 
 	}
 	@Test
-	public void EmpleadorTodosValidosMenosContraseña() {
+	public void EmpleadorTodosValidosMenospassword() {
 		JRadioButton RBEmpleador = (JRadioButton) TestUtils.getComponentForName((Ventana) controlador.getVista(),
 				Constantes.EMPLEADOR);
 		JButton Registrar = (JButton) TestUtils.getComponentForName((Ventana) controlador.getVista(),
@@ -346,7 +346,7 @@ public class TestEnabledDisabled {
 	}
 
 	@Test
-	public void EmpleadoTodosValidosMenosRepContraseña() {
+	public void EmpleadoTodosValidosMenosReppassword() {
 		JRadioButton RBEmpleado = (JRadioButton) TestUtils.getComponentForName((Ventana) controlador.getVista(),
 				Constantes.EMPLEADO);
 		JButton Registrar = (JButton) TestUtils.getComponentForName((Ventana) controlador.getVista(),
@@ -386,7 +386,7 @@ public class TestEnabledDisabled {
 
 	}
 	@Test
-	public void EmpleadorTodosValidosMenosRepContraseña() {
+	public void EmpleadorTodosValidosMenosReppassword() {
 		JRadioButton RBEmpleador = (JRadioButton) TestUtils.getComponentForName((Ventana) controlador.getVista(),
 				Constantes.EMPLEADOR);
 		JButton Registrar = (JButton) TestUtils.getComponentForName((Ventana) controlador.getVista(),

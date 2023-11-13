@@ -1,4 +1,4 @@
-package testGui.testGUIPanelAdmin;
+package test.testGui.testGUIPanelAdmin;
 
 import static org.junit.Assert.*;
 
@@ -13,8 +13,8 @@ import org.junit.Before;
 import org.junit.Test;
 
 import controlador.Controlador;
-import testGui.FalseOptionPane;
-import testGui.TestUtils;
+import test.testGui.FalseOptionPane;
+import test.testGui.TestUtils;
 import util.Constantes;
 import vista.Ventana;
 

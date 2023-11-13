@@ -1,4 +1,4 @@
-package testGui.testGUIPanelAdmin;
+package test.testGui.testGUIPanelAdmin;
 
 import java.awt.AWTException;
 import java.awt.Robot;
@@ -12,7 +12,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import bin.controlador.Controlador;
-import testGui.TestUtils;
+import test.testGui.TestUtils;
 import util.Constantes;
 import vista.Ventana;
 

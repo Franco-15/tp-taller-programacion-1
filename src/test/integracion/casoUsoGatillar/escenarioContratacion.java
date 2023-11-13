@@ -1,4 +1,4 @@
-package test.integracion.casoUsoGatillar;
+package test.Integracion.casoUsoGatillar;
 
 import static org.junit.Assert.*;
 

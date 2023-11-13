@@ -1,4 +1,4 @@
-package cajaBlanca;
+package test.cajaBlanca;
 import java.util.HashMap;
 import java.util.Iterator;
 
