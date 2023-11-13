@@ -1,7 +1,5 @@
 package testGui.testGUIPanelRegistro;
 
-import static org.junit.Assert.fail;
-
 import java.awt.Robot;
 
 import javax.swing.JButton;
@@ -25,6 +23,7 @@ public class TestCancelar{
 	
 	@Before
 	public void setUp() throws Exception {
+		robot=new Robot();
 		controlador = new Controlador();
 		controlador.setMyOptionPane(op);
 		JButton RegistrarLogin = (JButton) TestUtils.getComponentForName((Ventana) controlador.getVista(),
@@ -41,7 +40,9 @@ public class TestCancelar{
 	public void TestCancelarVuelveAPanelLogin() {
 		JButton Cancelar = (JButton) TestUtils.getComponentForName((Ventana) controlador.getVista(),
 				Constantes.REG_BUTTON_CANCELAR);
+		TestUtils.getDelay();
 		TestUtils.clickComponent(Cancelar, robot);
+		TestUtils.getDelay();
 		JTextField username = (JTextField) TestUtils.getComponentForName((Ventana) controlador.getVista(),
 				Constantes.NOMBRE_USUARIO);
 		Assert.assertNotNull("No se volvio al panel login", username);
