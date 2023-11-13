@@ -1,5 +1,6 @@
 package test.modeloNegocio;
 
+import org.junit.AfterClass;
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -20,6 +21,12 @@ public class agenciaRegistroTest {
 		Cliente empleador = agencia.registroEmpleador("d", "dd", "ddd", "1234567", Constantes.JURIDICA, Constantes.SALUD);
 
 	}
+	
+	@AfterClass
+	public static void tearDown() {
+		agencia.getEmpleados().clear();
+	}
+
 	
 	@Test(expected = NewRegisterException.class)
 	public void testRegistrarEmpleadoYaExistente() throws NewRegisterException, ImposibleCrearEmpleadoException {

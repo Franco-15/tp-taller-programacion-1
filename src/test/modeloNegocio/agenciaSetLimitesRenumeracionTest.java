@@ -1,5 +1,6 @@
 package test.modeloNegocio;
 
+import org.junit.AfterClass;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -12,6 +13,7 @@ public class agenciaSetLimitesRenumeracionTest {
 	
 	Agencia agencia = Agencia.getInstance();
 	
+
 	
 	@Test(expected = LimiteInferiorRemuneracionInvalidaException.class)
 	public void testLimiteInferiorInvalido() throws LimiteSuperiorRemuneracionInvalidaException, LimiteInferiorRemuneracionInvalidaException {

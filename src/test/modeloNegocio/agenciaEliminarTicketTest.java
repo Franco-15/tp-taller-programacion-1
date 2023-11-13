@@ -3,6 +3,7 @@ package test.modeloNegocio;
 import static org.junit.Assert.fail;
 
 import org.junit.After;
+import org.junit.AfterClass;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.BeforeClass;
@@ -56,6 +57,11 @@ public class agenciaEliminarTicketTest {
 		if(agencia.getEstado() == Mensajes.AGENCIA_EN_CONTRATACION.getValor()) {
 			agencia.gatillarRonda();
 		}
+	}
+	
+	@AfterClass
+	public static void tearDown() {
+		agencia.getEmpleados().clear();
 	}
 
 	@Test

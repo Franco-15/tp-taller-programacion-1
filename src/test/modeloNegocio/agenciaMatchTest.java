@@ -2,6 +2,7 @@ package test.modeloNegocio;
 
 import static org.junit.Assert.fail;
 
+import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
@@ -40,5 +41,13 @@ public class agenciaMatchTest {
 	public void test() {
 		fail("Not yet implemented");
 	}
+	
+	@AfterClass
+	public static void tearDown() {
+		agencia.getEmpleados().clear();
+		agencia.getEmpleadores().clear();
+
+	}
+
 
 }

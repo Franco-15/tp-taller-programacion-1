@@ -1,5 +1,6 @@
 package test.modeloNegocio;
 
+import org.junit.AfterClass;
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -34,6 +35,13 @@ public class agenciaCrearTicketTest {
 			Constantes.JURIDICA, 
 			Constantes.SALUD
 		);
+	}
+	
+	@AfterClass
+	public static void tearDown() {
+		agencia.getEmpleados().clear();
+		agencia.getEmpleadores().clear();
+
 	}
 
 	@Test
