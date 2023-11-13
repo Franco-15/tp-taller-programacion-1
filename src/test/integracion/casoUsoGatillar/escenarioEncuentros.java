@@ -1,10 +1,9 @@
 package test.integracion.casoUsoGatillar;
 
-import static org.junit.Assert.*;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 
+import org.junit.AfterClass;
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -110,6 +109,12 @@ public class escenarioEncuentros {
 		empleador2.setCandidato(empleado2);
 		
 		agencia.gatillarRonda();
+	}
+	
+	@AfterClass
+	public static void tearDown() {
+	agencia.getEmpleados().clear();
+
 	}
 
 	@Test

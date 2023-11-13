@@ -7,7 +7,7 @@ import java.util.Arrays;
 
 import org.junit.BeforeClass;
 import org.junit.Test;
-
+import org.junit.AfterClass;
 import org.junit.Assert;
 
 import modeloDatos.ClientePuntaje;
@@ -81,6 +81,12 @@ public class escenarioContratacion {
 		
 	}
 
+	@AfterClass
+	public static void tearDown() {
+	agencia.getEmpleados().clear();
+
+	}
+	
 	@Test
 	public void testEstadoContratacion() {
 		Assert.assertEquals(
