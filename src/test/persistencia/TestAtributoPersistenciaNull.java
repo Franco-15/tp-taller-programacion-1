@@ -9,6 +9,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import modeloNegocio.Agencia;
+import persistencia.PersistenciaXML;
 
 public class TestAtributoPersistenciaNull {
 
@@ -24,7 +25,8 @@ public class TestAtributoPersistenciaNull {
 	
 	@After
 	public void tearDown() throws Exception {
-		File archivo = new File(nombre_archivo);			
+		File archivo = new File(nombre_archivo);
+		agencia.setPersistencia(null);
 		if(archivo.exists())
 			archivo.delete();
 	}

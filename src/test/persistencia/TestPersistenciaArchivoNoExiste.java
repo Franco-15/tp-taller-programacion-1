@@ -26,7 +26,8 @@ public class TestPersistenciaArchivoNoExiste {
 	
 	@After
 	public void tearDown() throws Exception {
-		File archivo = new File(nombre_archivo);			
+		File archivo = new File(nombre_archivo);
+		agencia.setPersistencia(null);
 		if(archivo.exists())
 			archivo.delete();
 	}

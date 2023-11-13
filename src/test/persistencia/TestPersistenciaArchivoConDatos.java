@@ -3,6 +3,7 @@ package test.persistencia;
 import java.io.File;
 import java.io.IOException;
 
+import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -22,6 +23,10 @@ public class TestPersistenciaArchivoConDatos {
 		agencia.setPersistencia(new PersistenciaXML());
 	}
 
+	@After
+	public void tearDown() {
+		agencia.setPersistencia(null);	
+	}
 	@Test
 	public void test_cargar_archivo() {
 		File archivo = new File(nombre_archivo);			
